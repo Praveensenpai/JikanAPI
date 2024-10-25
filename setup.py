@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="Jikanapi",
-    version="0.2.1",
+    version="0.2.2",
     author="Praveen Senpai",
     author_email="pvnt20@gmail.com",
     description="A Python wrapper for the Jikan API for MyAnimeList.",
@@ -11,9 +11,9 @@ setup(
     url="https://github.com/praveensenpai/Jikanapi",
     packages=find_packages(),
     install_requires=[
-        "jikanpy",
-        "pydantic",
-        "rich",
+        "jikanpy-v4==1.0.2",
+        "pydantic==2.9.2",
+        "rich==13.9.3",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
