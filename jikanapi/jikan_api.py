@@ -1,7 +1,7 @@
 from typing import Optional
 from jikanpy import Jikan
 from jikanpy.exceptions import APIException
-from models import Anime
+from jikanapi.models import Anime
 import time
 from rich import print
 
