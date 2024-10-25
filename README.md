@@ -18,7 +18,7 @@ This project is currently in development. New features will be added in the futu
 You can install JikanAPI via pip:
 
 ```bash
-pip install JikanAPI
+pip install jikanapi
 ```
 
 ## Usage

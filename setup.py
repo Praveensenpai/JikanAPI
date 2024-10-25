@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="JikanAPI",
-    version="0.1.2",
+    name="Jikanapi",
+    version="0.2.0",
     author="Praveen Senpai",
     author_email="pvnt20@gmail.com",
     description="A Python wrapper for the Jikan API for MyAnimeList.",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/praveensenpai/JikanAPI",
+    url="https://github.com/praveensenpai/Jikanapi",
     packages=find_packages(),
     install_requires=[
         "jikanpy",
