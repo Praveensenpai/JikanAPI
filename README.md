@@ -26,12 +26,13 @@ pip install JikanAPI
 Here's an example of how to use JikanAPI to get information about an anime:
 
 ```python
-from jikan_client.client import JikanWrapper
+from jikanapi import JikanAPI
 from rich import print
 
-client = JikanWrapper()
-anime_data = client.get_anime(44511)
+jikan_client = JikanAPI()
+anime_data = jikan_client.get_anime(44511)
 print(anime_data)
+
 ```
 
 ### Sample Output
