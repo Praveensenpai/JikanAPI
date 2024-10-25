@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="JikanAPI",
-    version="0.1.1",
+    version="0.1.2",
     author="Praveen Senpai",
     author_email="pvnt20@gmail.com",
     description="A Python wrapper for the Jikan API for MyAnimeList.",

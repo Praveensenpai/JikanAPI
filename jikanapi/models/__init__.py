@@ -1,4 +1,4 @@
-from models.anime import (
+from jikanapi.models.anime import (
     Anime,  # noqa: F401
     Genre,  # noqa: F401
     Producer,  # noqa: F401
