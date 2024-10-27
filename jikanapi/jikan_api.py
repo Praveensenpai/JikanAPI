@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 from jikanpy import Jikan
 from jikanpy.exceptions import APIException
 from jikanapi.models import Anime
@@ -34,3 +34,24 @@ class JikanAPI:
                 raise e
 
         raise RuntimeError("Max retries reached. Could not retrieve anime.")
+
+    def search_anime(self, query: str) -> List[Anime]:
+        for attempt in range(self.max_tries):
+            try:
+                search_results = self.jikan.search("anime", query)["data"]
+                return [Anime(**anime) for anime in search_results]
+            except APIException as e:
+                if "RateLimitException" in str(e):
+                    print(
+                        "[bold blue]Rate limit exceeded. Waiting for 3 seconds before retrying...[/bold blue]"
+                    )
+                    print(
+                        f"[bold blue]Retry: ({attempt + 1}/{self.max_tries}) [/bold blue]"
+                    )
+                    time.sleep(3)
+                else:
+                    raise e
+            except Exception as e:
+                raise e
+
+        raise RuntimeError("Max retries reached. Could not perform search.")
